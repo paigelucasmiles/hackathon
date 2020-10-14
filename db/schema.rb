@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(version: 2020_10_14_170456) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.integer "house_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["house_id"], name: "index_users_on_house_id"
   end
 
   add_foreign_key "students", "houses"

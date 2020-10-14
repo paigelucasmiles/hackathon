@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Student.destroy_all
+User.destroy_all
 House.destroy_all
 
 ravenclaw = House.create(name: "Ravenclaw", characteristic1: "Intelligence", characteristic2: "Knowledge", characteristic3: "Wit", characteristic4: "Observation")
@@ -16,4 +17,5 @@ slytherin = House.create(name: "Slytherin", characteristic1: "Ambition", charact
 Student.create(name: "Harry Potter", house: gryffindor)
 Student.create(name: "Draco Malfoy", house: slytherin)
 
-User.create(name: "Joe")
+User.create(name: "Joe", house: gryffindor)
+User.create(name: "Jasmine", house: slytherin)
